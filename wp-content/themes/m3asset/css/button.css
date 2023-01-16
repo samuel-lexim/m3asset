@@ -1,4 +1,16 @@
-/* Call button */
+.button_link {
+  display: inline-block;
+  border: 1px solid;
+  min-width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 .call_btn > a {
   text-decoration: none !important;
   display: inline-block;
@@ -53,7 +65,7 @@
 }
 
 .blue_btn .btn_inner {
-  background: #39A8E2;
+  background: #0082C8;
   color: #fff;
   display: inline-block;
   height: 40px;
@@ -62,7 +74,6 @@
   text-align: center;
   padding: 0 20px;
   min-width: 150px;
-  font-family: 'Roboto', san-serif, serif;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

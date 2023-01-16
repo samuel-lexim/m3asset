@@ -9,21 +9,16 @@
  * @package m3asset
  */
 
+
+$footer_mail      = get_field( 'footer_email', 'option' );
+$footer_copyright = get_field( 'copyright', 'option' );
+
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'm3asset' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'm3asset' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'm3asset' ), 'm3asset', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+	<footer id="footerId" class="site-footer">
+		<div class="page-padding">
+            <p><?= $footer_mail ?></p>
+            <p><?= $footer_copyright ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -1,0 +1,20 @@
+<?php
+$postId = get_the_ID();
+
+if ( isset( $args ) && $args ) {
+	?>
+
+    <div class="title_section">
+        <?php
+        $bg = $args['background'] ?? getDefaultImg();
+        $underlineColor = $args['underline_color'] ?? '#337EA3';
+        ?>
+
+        <div class="_inner" style="background-image: url(<?= $bg ?>)">
+            <?php if ( $args['the_title'] ) { ?>
+                <h1 class="_title" style="--underline-color: <?= $underlineColor ?>"><?= $args['the_title'] ?></h1>
+            <?php } ?>
+        </div>
+    </div>
+
+<?php }

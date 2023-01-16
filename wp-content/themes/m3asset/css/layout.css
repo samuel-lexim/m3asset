@@ -1,7 +1,7 @@
 html {
-  color: #736E6E;
-  font-family: "Helvetica Neue", Roboto, serif;
-  line-height: 1.75;
+  color: #1E1E1E;
+  font-family: "Montserrat", san-serif, serif;
+  line-height: 2;
   font-size: 16px;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
@@ -11,44 +11,48 @@ html {
   box-sizing: border-box;
 }
 
-.gray {
-  color: #736E6E;
+body {
+  margin: 0;
 }
 
-a, .blue {
-  color: #39A8E2;
+.black {
+  color: #1E1E1E;
 }
 
-a:hover, a:focus, .red {
-  color: #DC2028;
+a, .darkBlue {
+  color: #2D4057;
+}
+
+a:hover, a:focus, .blue {
+  color: #0082C8;
 }
 
 h1 {
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
 h2 {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 h3 {
+  margin-top: 0;
   margin-bottom: 15px;
 }
 
 h4, p {
+  margin-top: 0;
   margin-bottom: 10px;
-}
-
-.lh_22 {
-  line-height: 2.2;
 }
 
 .lh_2, .lh_20 {
   line-height: 2;
 }
 
-.lh_175 {
-  line-height: 1.75;
+.lh_17 {
+  line-height: 1.7;
 }
 
 .lh_15 {
@@ -83,48 +87,22 @@ h4, p {
   font-weight: 700;
 }
 
-.fw900 {
-  font-weight: 900;
-}
-
-.LR_pad {
+.lr_pad {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.top_pad {
+.tb_pad {
   padding-top: 40px;
   padding-bottom: 40px;
-}
-
-.after_header_pad {
-  padding-top: 20px;
-}
-
-.before_footer_pad {
-  padding-bottom: 20px;
-}
-
-.button_link {
-  font-family: Roboto, serif;
-  display: inline-block;
-  border: 1px solid;
-  min-width: 150px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  text-decoration: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .error-404.not-found {
   width: 100%;
   min-height: 404px;
-  background: #39A8E2;
+  background: #0082C8;
   color: #fff;
   display: -webkit-flex;
   display: -moz-flex;
@@ -151,28 +129,12 @@ h4, p {
     padding-top: 5vw;
     padding-bottom: 5vw;
   }
-
-  .after_header_pad {
-    padding-top: 30px;
-  }
-
-  .before_footer_pad {
-    padding-bottom: 30px;
-  }
 }
 
 @media only screen and (min-width: 1024px) {
   .LR_pad {
     padding-left: 7vw;
     padding-right: 7vw;
-  }
-
-  .after_header_pad {
-    padding-top: 40px;
-  }
-
-  .before_footer_pad {
-    padding-bottom: 40px;
   }
 }
 

@@ -185,7 +185,52 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /* Disable WordPress Admin Bar for all users */
 add_filter( 'show_admin_bar', '__return_false' );
 
+// Add slug column for PAGE posts
+add_filter( "manage_page_posts_columns", "page_columns" );
+function page_columns( $columns ) {
+    $type        = get_post_type();
+    $add_columns = array(
+        'slug' => 'Slug',
+    );
 
+//    if ( $type === 'vtproduct' ) {
+//        $more_columns = array(
+//            'price'      => 'Regular Price',
+//            'sale_price' => 'Sale Price'
+//        );
+//        $add_columns  = array_merge( $add_columns, $more_columns );
+//    }
+
+    $res = array_slice( $columns, 0, 2, true ) +
+        $add_columns +
+        array_slice( $columns, 2, count( $columns ) - 1, true );
+
+
+    return $res;
+}
+
+add_action( "manage_page_posts_custom_column", "my_custom_page_columns" );
+function my_custom_page_columns( $column ) {
+    global $post;
+    switch ( $column ) {
+        case 'slug' :
+            echo $post->post_name;
+            break;
+        case 'price' :
+            $regular_price = get_field( 'regular_price', $post );
+            echo number_format( floatval( $regular_price ) );
+            break;
+        case 'sale_price' :
+            $sale_price = get_field( 'sale_price', $post );
+            echo number_format( floatval( $sale_price ) );
+            break;
+    }
+}
+
+add_filter( "manage_post_posts_columns", "page_columns" );
+add_action( "manage_post_posts_custom_column", "my_custom_page_columns" );
+//add_filter( "manage_vtproduct_posts_columns", "page_columns" );
+//add_action( "manage_vtproduct_posts_custom_column", "my_custom_page_columns" );
 
 // END - Add slug column for PAGE posts
 
