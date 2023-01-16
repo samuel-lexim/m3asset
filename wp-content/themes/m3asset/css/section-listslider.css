@@ -1,0 +1,15 @@
+.list_slider_section {
+  background: #F9F9F9;
+}
+
+.list_slider_section ._section_title {
+  padding-bottom: 25px;
+  padding-right: 85px;
+}
+
+@media only screen and (min-width: 768px) {
+  .list_slider_section ._section_title {
+    padding-left: 85px;
+    text-align: center;
+  }
+}

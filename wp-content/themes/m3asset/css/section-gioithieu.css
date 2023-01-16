@@ -1,0 +1,44 @@
+.gioi_thieu_section ._inner {
+  max-width: 815px;
+  margin: 0 auto;
+}
+
+.gioi_thieu_section ._first_content {
+  margin-bottom: 30px;
+}
+
+.gioi_thieu_section ._title {
+  text-transform: uppercase;
+}
+
+.gioi_thieu_section ._inner img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.gioi_thieu_section ._content_list {
+  margin-top: 30px;
+}
+
+.gioi_thieu_section ._content_list {
+  margin-top: 30px;
+}
+
+/* Color */
+.gioi_thieu_section.bg_blue {
+  background: #39A8E2;
+}
+
+.gioi_thieu_section.bg_blue * {
+  color: #fff !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .gioi_thieu_section ._title {
+    text-align: center;
+  }
+
+}

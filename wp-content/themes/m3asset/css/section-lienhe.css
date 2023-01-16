@@ -1,0 +1,121 @@
+.contact_section .google_map iframe {
+  display: inherit;
+  width: 100%;
+}
+
+.contact_section .info {
+  position: relative;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+}
+
+.contact_section .info:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.contact_section .info.blur_blue:before {
+  background-color: rgba(31, 121, 169, 0.7);
+}
+
+.contact_list {
+  position: relative;
+  z-index: 99;
+}
+
+.contact_list .contact_row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact_list .contact_row .white-circle {
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.white-circle {
+  width: 67px;
+  height: 67px;
+  border: 1px solid #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+  .white-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .white-circle > svg {
+    width: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact_section .info {
+    padding: 60px 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contact_section ._inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  .contact_list .contact_row {
+    margin: 30px 0;
+  }
+
+  .contact_section .google_map, .contact_section .info {
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%;
+  }
+
+  .contact_section .info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 5vw;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+  .contact_list .contact_row {
+    margin: 40px 0;
+  }
+}

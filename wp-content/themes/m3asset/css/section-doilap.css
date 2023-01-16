@@ -1,0 +1,78 @@
+
+.doi-lap-section.default {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.doi-lap-section ._title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.doi-lap-section ._row:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.doi-lap-section ._row ._left img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 850px) {
+  .doi-lap-section ._row {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  .doi-lap-section ._row.reversed {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .doi-lap-section ._row ._left {
+    -webkit-flex: 0 0 34%;
+    -ms-flex: 0 0 34%;
+    flex: 0 0 34%;
+  }
+
+  .doi-lap-section ._row ._right {
+    padding-left: 3vw;
+  }
+
+  .doi-lap-section ._row.reversed ._right {
+    padding-left: 0;
+    padding-right: 3vw;
+    text-align: right;
+  }
+
+  .doi-lap-section ._row:not(:last-child) {
+    margin-bottom: 5vw;
+  }
+
+  .doi-lap-section ._title {
+    margin-top: -10px;
+  }
+
+}
+
+@media only screen and (min-width: 1600px) {
+  .doi-lap-section ._row ._right {
+    padding-left: 50px;
+  }
+
+  .doi-lap-section ._row.reversed ._right {
+    padding-left: 0;
+    padding-right: 50px;
+  }
+
+  .doi-lap-section ._row:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,32 @@
+.anh_bia_section {
+  position: relative;
+}
+
+.anh_bia_section ._inner {
+  height: 360px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.anh_bia_section ._title {
+  position: absolute;
+  text-align: center;
+  min-width: fit-content;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border-bottom: 6px solid;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .anh_bia_section ._inner {
+    height: 480px;
+  }
+}

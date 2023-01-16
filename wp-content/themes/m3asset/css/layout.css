@@ -1,0 +1,190 @@
+html {
+  color: #736E6E;
+  font-family: "Helvetica Neue", Roboto, serif;
+  line-height: 1.75;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gray {
+  color: #736E6E;
+}
+
+a, .blue {
+  color: #39A8E2;
+}
+
+a:hover, a:focus, .red {
+  color: #DC2028;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+h4, p {
+  margin-bottom: 10px;
+}
+
+.lh_22 {
+  line-height: 2.2;
+}
+
+.lh_2, .lh_20 {
+  line-height: 2;
+}
+
+.lh_175 {
+  line-height: 1.75;
+}
+
+.lh_15 {
+  line-height: 1.5;
+}
+
+.lh_14 {
+  line-height: 1.4;
+}
+
+.lh_1, .lh_10 {
+  line-height: 1;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw900 {
+  font-weight: 900;
+}
+
+.LR_pad {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top_pad {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.after_header_pad {
+  padding-top: 20px;
+}
+
+.before_footer_pad {
+  padding-bottom: 20px;
+}
+
+.button_link {
+  font-family: Roboto, serif;
+  display: inline-block;
+  border: 1px solid;
+  min-width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.error-404.not-found {
+  width: 100%;
+  min-height: 404px;
+  background: #39A8E2;
+  color: #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .LR_pad {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .top_pad {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .after_header_pad {
+    padding-top: 30px;
+  }
+
+  .before_footer_pad {
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .LR_pad {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .after_header_pad {
+    padding-top: 40px;
+  }
+
+  .before_footer_pad {
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .LR_pad {
+    max-width: 1400px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .top_pad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
