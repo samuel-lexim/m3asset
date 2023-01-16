@@ -11,7 +11,7 @@ if ( isset( $args ) && $args ) {
         ?>
 
         <div class="_inner" style="background-image: url(<?= $bg ?>)">
-            <div class="_text_wrap">
+            <div class="_text_wrap lr_pad">
             <?php if ( $args['the_title'] ) { ?>
                 <h1 class="_title" style="--underline-color: <?= $underlineColor ?>"><?= $args['the_title'] ?></h1>
             <?php } ?>
