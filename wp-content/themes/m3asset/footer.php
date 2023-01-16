@@ -17,9 +17,16 @@ $footer_copyright = get_field( 'copyright', 'option' );
 
 	<footer id="footerId" class="site-footer">
 		<div class="lr_pad _inner">
+
+            <?php if ($footer_mail) { ?>
             <p class="darkBlue s14 fw700"><?= $footer_mail ?></p>
+            <?php } ?>
+
+            <?php if ($footer_copyright) { ?>
             <p class="s13 fw400"><?= $footer_copyright ?></p>
-		</div><!-- .site-info -->
+            <?php } ?>
+
+        </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
