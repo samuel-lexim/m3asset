@@ -19,11 +19,11 @@ $footer_copyright = get_field( 'copyright', 'option' );
 		<div class="lr_pad _inner">
 
             <?php if ($footer_mail) { ?>
-            <p class="darkBlue s14 fw700"><?= $footer_mail ?></p>
+            <p class="darkBlue s14 fw700"><?= esc_html($footer_mail) ?></p>
             <?php } ?>
 
             <?php if ($footer_copyright) { ?>
-            <p class="s13 fw400"><?= $footer_copyright ?></p>
+            <p class="s13 fw400"><?= esc_html($footer_copyright) ?></p>
             <?php } ?>
 
         </div><!-- .site-info -->

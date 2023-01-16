@@ -25,7 +25,7 @@
 
         if ($page_sections && is_array($page_sections)) {
             foreach ($page_sections as $section) {
-                $layout = $section['acf_fc_layout'];
+                $layout = esc_attr($section['acf_fc_layout']);
                 get_template_part('acf-layout/section', $layout, $section);
                 ?>
             <?php } ?>

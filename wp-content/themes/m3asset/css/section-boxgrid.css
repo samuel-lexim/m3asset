@@ -1,0 +1,31 @@
+.box_grid_section {
+  position: relative;
+  overflow: hidden;
+}
+
+.box_grid_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.box_grid_flex ._box_img svg {
+  max-width: 100%;
+}
+
+.box_grid_flex .box_item {
+  flex: 1 auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}

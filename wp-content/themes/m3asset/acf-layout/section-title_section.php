@@ -10,14 +10,14 @@ if ( isset( $args ) && $args ) {
         $underlineColor = $args['underline_color'] ?? '#337EA3';
         ?>
 
-        <div class="_inner" style="background-image: url(<?= $bg ?>)">
+        <div class="_inner" style="background-image: url(<?= esc_url($bg) ?>)">
             <div class="_text_wrap lr_pad">
             <?php if ( $args['the_title'] ) { ?>
-                <h1 class="_title" style="--underline-color: <?= $underlineColor ?>"><?= $args['the_title'] ?></h1>
+                <h1 class="_title" style="--underline-color: <?= esc_attr($underlineColor) ?>"><?= esc_html($args['the_title']) ?></h1>
             <?php } ?>
 
             <?php if ( $args['description'] ) { ?>
-                <p class="_description"><?= $args["description"] ?></p>
+                <p class="_description"><?= esc_html($args["description"]) ?></p>
             <?php } ?>
             </div>
 
