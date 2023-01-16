@@ -16,9 +16,9 @@ $footer_copyright = get_field( 'copyright', 'option' );
 ?>
 
 	<footer id="footerId" class="site-footer">
-		<div class="page-padding">
-            <p><?= $footer_mail ?></p>
-            <p><?= $footer_copyright ?></p>
+		<div class="lr_pad _inner">
+            <p class="darkBlue s14 fw700"><?= $footer_mail ?></p>
+            <p class="s13 fw400"><?= $footer_copyright ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
