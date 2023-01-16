@@ -11,9 +11,16 @@ if ( isset( $args ) && $args ) {
         ?>
 
         <div class="_inner" style="background-image: url(<?= $bg ?>)">
+            <div class="_text_wrap">
             <?php if ( $args['the_title'] ) { ?>
                 <h1 class="_title" style="--underline-color: <?= $underlineColor ?>"><?= $args['the_title'] ?></h1>
             <?php } ?>
+
+            <?php if ( $args['description'] ) { ?>
+                <p class="_description"><?= $args["description"] ?></p>
+            <?php } ?>
+            </div>
+
         </div>
     </div>
 
