@@ -4,7 +4,7 @@
 }
 
 .title_section ._inner {
-  height: 360px;
+  height: 475px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,7 +39,5 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .title_section ._inner {
-    height: 34vw;
-  }
+
 }
