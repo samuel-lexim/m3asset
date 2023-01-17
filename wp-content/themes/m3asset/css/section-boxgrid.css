@@ -6,26 +6,88 @@
 .box_grid_flex {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box_grid_flex .box_item {
+  position: relative;
+  flex: 1 auto;
+  text-align: center;
+  padding: 20px;
+  background: #F8F8F8;
+  margin: 18px 0;
+  max-width: 350px;
+  min-height: 350px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.box_grid_flex.light_sky .box_item {
+  background: #E9F3F9;
+}
+
+.box_grid_flex ._box_img {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
 }
 
 .box_grid_flex ._box_img svg {
   max-width: 100%;
 }
 
-.box_grid_flex .box_item {
-  flex: 1 auto;
-  text-align: center;
+.box_grid_flex.bottom ._box_img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  z-index: -1;
+}
+
+.box_grid_flex.bottom .box_item.left ._box_img {
+  left: 0;
+  right: auto;
+}
+
+.box_grid_flex.bottom .box_item.right ._box_img {
+  right: 0;
+  left: auto;
+}
+
+.box_grid_flex.top .box_item.left ._box_img {
+  justify-content: left;
+}
+
+.box_grid_flex.top .box_item.right ._box_img {
+  justify-content: right;
+}
+
+.box_grid_flex ._box_item_summary {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
+  .box_grid_flex {
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: inherit;
+    flex-wrap: wrap;
+  }
 
+  .box_grid_flex .box_item {
+    flex: 350px;
+    margin: 18px;
+  }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1180px) {
+  .box_grid_flex {
+    justify-content: space-between;
+  }
 
-
-}
-
-@media only screen and (min-width: 1440px) {
-
+  .box_grid_flex .box_item {
+    margin: 18px 0;
+  }
 }

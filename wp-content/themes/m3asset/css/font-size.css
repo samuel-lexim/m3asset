@@ -65,24 +65,4 @@ h4, p, .h4, .s16 {
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  h1, .h1, .s40 {
-    font-size: 40px;
-  }
 
-  h2, .h2, .s32 {
-    font-size: 32px;
-  }
-
-  h3, .h3, .s24 {
-    font-size: 24px;
-  }
-
-  .s20 {
-    font-size: 20px;
-  }
-
-  h4, p, .h4, .s16 {
-    font-size: 16px;
-  }
-}

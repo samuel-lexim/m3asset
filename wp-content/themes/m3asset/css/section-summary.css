@@ -31,6 +31,10 @@
   position: relative;
 }
 
+.summary_section ._summary_content p {
+  margin-bottom: 0;
+}
+
 .summary_section ._quote_icon {
   position: absolute;
   left: 100%;

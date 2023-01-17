@@ -121,32 +121,27 @@ h4, p {
 
 @media only screen and (min-width: 768px) {
   .lr_pad {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .tb_pad {
-    padding-top: 5vw;
-    padding-bottom: 5vw;
+    padding-top: 8vw;
+    padding-bottom: 8vw;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .lr_pad {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1180px) {
   .lr_pad {
     max-width: 1124px;
     padding-left: 0;
     padding-right: 0;
   }
+}
 
+@media only screen and (min-width: 1440px) {
   .tb_pad {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
 }
