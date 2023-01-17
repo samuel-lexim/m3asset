@@ -32,10 +32,18 @@
   content: '';
   height: 12px;
   width: 100%;
-  background-color: var(--underline-color);
+  background-color: transparent;
   position: absolute;
   bottom: 8px;
   z-index: -1;
+}
+
+.title_section ._title.uc_blue:before {
+  background-color: #337EA3;
+}
+
+.title_section ._title.uc_light_wine:before {
+  background-color: #826a88;
 }
 
 @media only screen and (min-width: 768px) {

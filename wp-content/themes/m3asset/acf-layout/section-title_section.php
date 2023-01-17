@@ -7,13 +7,12 @@ if ( isset( $args ) && $args ) {
     <div class="title_section">
         <?php
         $bg = $args['background'] ?? getDefaultImg();
-        $underlineColor = $args['underline_color'] ?? '#337EA3';
         ?>
 
         <div class="_inner" style="background-image: url(<?= esc_url($bg) ?>)">
             <div class="_text_wrap lr_pad">
             <?php if ( $args['the_title'] ) { ?>
-                <h1 class="_title" style="--underline-color: <?= esc_attr($underlineColor) ?>"><?= esc_html($args['the_title']) ?></h1>
+                <h1 class="_title <?= esc_attr($args['underline_color']) ?>"><?= esc_html($args['the_title']) ?></h1>
             <?php } ?>
 
             <?php if ( $args['description'] ) { ?>
