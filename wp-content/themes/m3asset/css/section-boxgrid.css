@@ -1,7 +1,17 @@
 .box_grid_section {
   position: relative;
   overflow: hidden;
+  background: #fff;
 }
+
+.box_grid_section.gray {
+  background: #F8F8F8;
+}
+
+.box_grid_section.light_sky {
+  background: #E9F3F9;
+}
+
 
 .box_grid_flex {
   display: flex;

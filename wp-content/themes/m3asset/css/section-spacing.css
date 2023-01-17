@@ -2,6 +2,14 @@
   padding-bottom: 40px;
 }
 
+.spacing_section.gray {
+  background: #F8F8F8;
+}
+
+.spacing_section.light_sky {
+  background: #E9F3F9;
+}
+
 @media only screen and (min-width: 768px) {
   .spacing_section {
     padding-bottom: 50px;
