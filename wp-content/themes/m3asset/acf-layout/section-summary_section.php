@@ -23,7 +23,7 @@ if (isset($args) && $args) {
 
                 <?php if ($args['summary_content']) { ?>
                     <div class="_summary_content">
-                        <p><?= esc_html($args["summary_content"]) ?></p>
+                        <p><?= esc_textarea($args["summary_content"]) ?></p>
 
                         <?php if ($args['show_quote_icon']) { ?>
                             <div class="_quote_icon">

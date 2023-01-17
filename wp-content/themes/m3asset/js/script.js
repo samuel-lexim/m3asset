@@ -35,5 +35,14 @@ svgInit(); // Convert img to svg
 
 $(document).ready(function () {
 
+    // Slider section - Slick
+    $('.slider_section_slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        fade: true,
+        adaptiveHeight: true
+    });
 
 });

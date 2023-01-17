@@ -68,23 +68,23 @@ h4, p {
 }
 
 .fw300 {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .fw400 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .fw500 {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .fw600 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .fw700 {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .lr_pad {
@@ -117,6 +117,46 @@ h4, p {
   -webkit-align-items: center;
   align-items: center;
   text-align: center;
+}
+
+.blueSquare {
+  position: relative;
+  padding: 0 16px;
+  max-width: fit-content;
+}
+
+.blueSquare:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #0082C8;
+  right: 0;
+  bottom: 7px;
+}
+
+.darkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  height: 36px;
+  line-height: 36px;
+  background: #2D4057;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.darkButton svg {
+  margin-left: 5px;
+}
+
+.darkButton:hover {
+  color: #00a6ff;
+}
+.darkButton:hover svg path {
+  fill: #00a6ff;
 }
 
 @media only screen and (min-width: 768px) {

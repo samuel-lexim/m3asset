@@ -1,5 +1,3 @@
-
-
 /* menu */
 
 .nav-menu {
@@ -18,17 +16,12 @@
   text-decoration: none;
   border: none;
   outline: 0;
-  font-size: 16px;
-  color: #736E6E;
 }
 
 .nav-menu a:hover, .nav-menu a[aria-current="page"] {
-  color: #DC2028;
-}
-
-@media only screen and (max-width: 767px) {
 
 }
+
 
 @media only screen and (min-width: 768px) {
   .site-header {
@@ -48,8 +41,4 @@
     flex: 1;
     text-align: right;
   }
-}
-
-@media only screen and (min-width: 1024px) {
-
 }
