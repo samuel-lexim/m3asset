@@ -29,7 +29,12 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div id="page" class="site">
+<?php
+$show_square_on_active_links = get_field('show_square_on_active_links', 'option');
+
+?>
+
+<div id="page" class="site <?= $show_square_on_active_links ? 'showSquareOmActivatedLink' : '' ?>">
     <header id="masthead" class="site-header">
         <div class="header_inner inner_bottom_header lr_pad">
 
@@ -47,11 +52,11 @@
 
             <nav id="site-navigation" class="main-navigation">
                 <button style="display: none" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <?php esc_html_e( 'Menu', 'm3asset' ); ?></button>
+                    <?php esc_html_e('Menu', 'm3asset'); ?></button>
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'menu-1',
-                    'menu_id'        => 'primary-menu',
+                    'menu_id' => 'primary-menu',
                 ]);
                 ?>
             </nav><!-- #site-navigation -->

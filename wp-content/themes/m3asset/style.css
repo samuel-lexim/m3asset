@@ -4,6 +4,7 @@
 @import "css/layout.css";
 @import "css/font-size.css";
 @import "css/button.css";
+@import "css/form.css";
 
 @import "css/header.css";
 @import "css/footer.css";
@@ -13,4 +14,5 @@
 @import "css/section-summary.css";
 @import "css/section-boxgrid.css";
 @import "css/section-slider.css";
+@import "css/section-contact.css";
 

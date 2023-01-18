@@ -1,0 +1,52 @@
+.wpforms-field-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wpforms-field {
+  position: relative;
+  width: 100%;
+  padding: 0 0 20px;
+}
+
+.wpforms-field-label {
+  display: inline-flex;
+  margin: 0 0 15px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.wpforms-required-label {
+  color: #d14949;
+  margin-left: 6px;
+  line-height: 20px;
+}
+
+label.wpforms-error {
+  color: #d14949;
+  font-weight: 500;
+}
+
+.wpforms-field input {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 10px;
+}
+
+.wpforms-container button {
+  width: 100%;
+  height: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  background: #243548;
+  border-radius: 10px;
+  line-height: 50px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+}

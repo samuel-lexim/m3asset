@@ -160,9 +160,9 @@ template {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -321,7 +321,11 @@ textarea {
   border: 1px solid #DBDBDB;
   background: #fff;
   border-radius: 10px;
-  padding: 3px;
+  padding: 5px 20px;
+}
+
+textarea {
+  padding: 20px;
 }
 
 input[type="text"]:focus,
@@ -340,7 +344,8 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #1E1E1E;
+  outline: none !important;
+  border: 1px solid #0082C8;
 }
 
 select {
@@ -349,5 +354,8 @@ select {
 
 textarea {
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 160px;
 }
 

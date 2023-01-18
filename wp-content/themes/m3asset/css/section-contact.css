@@ -1,0 +1,29 @@
+.contact_section.label_darkBlue {
+  color: #2D4057;
+}
+
+.contact_section.label_white {
+  color: #fff;
+}
+
+.contact_section ._container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  background-color: #fff;
+}
+
+.contact_section.bg_light_sky ._container {
+  background-color: #E9F3F9;
+}
+
+.contact_section ._wrap {
+  max-width: 520px;
+  width: 100%;
+}
+
+
+.contact_section .wpforms-field-label {
+
+}

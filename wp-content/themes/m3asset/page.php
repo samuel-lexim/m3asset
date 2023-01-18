@@ -21,8 +21,9 @@
     // Start the loop.
     while (have_posts()) : the_post();
 
-        $page_sections = get_field('page_sections');
+        the_content();
 
+        $page_sections = get_field('page_sections');
         if ($page_sections && is_array($page_sections)) {
             foreach ($page_sections as $section) {
                 $layout = esc_attr($section['acf_fc_layout']);
