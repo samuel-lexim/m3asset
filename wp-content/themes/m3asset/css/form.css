@@ -50,3 +50,7 @@ label.wpforms-error {
   border: none;
   cursor: pointer;
 }
+
+.wpforms-container button:hover {
+  color: #00a6ff;
+}

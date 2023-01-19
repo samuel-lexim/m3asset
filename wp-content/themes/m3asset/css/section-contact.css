@@ -11,7 +11,11 @@
   display: flex;
   align-items: center;
   min-height: 600px;
+  padding: 50px 0;
   background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact_section.bg_light_sky ._container {
@@ -23,7 +27,43 @@
   width: 100%;
 }
 
+.contact_section._has_bg ._wrap {
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+}
 
-.contact_section .wpforms-field-label {
+.contact_section ._h1Title {
+  position: relative;
+  text-align: center;
+}
 
+.contact_section ._h1Title.paper_airplane {
+  text-align: left;
+}
+
+.contact_section ._h1Title.paper_airplane .airPlaneSvg {
+  position: absolute;
+  top: -35px;
+  margin-left: 15px;
+  max-width: 50%;
+  width: 100px;
+}
+
+@media only screen and (min-width: 600px) {
+  .contact_section ._h1Title.paper_airplane .airPlaneSvg {
+    top: -24px;
+    margin-left: 20px;
+    width: 236px;
+  }
+
+  .contact_section._has_bg ._wrap {
+    padding: 50px 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact_section ._container {
+    padding: 70px 0;
+  }
 }
