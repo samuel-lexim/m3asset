@@ -108,6 +108,9 @@
     transition: all .2s ease-in-out;
   }
 
+  .bodyContainer.transparentHeader .nav-icon:after,
+  .bodyContainer.transparentHeader .nav-icon:before,
+  .bodyContainer.transparentHeader .nav-icon span,
   .bodyContainer.darkBlue .nav-icon:after,
   .bodyContainer.darkBlue .nav-icon:before,
   .bodyContainer.darkBlue .nav-icon span {
@@ -140,6 +143,10 @@
 
   .bodyContainer.darkBlue .main-navigation {
     background-color: #253952;
+  }
+
+  .bodyContainer.transparentHeader .main-navigation {
+    background: transparent;
   }
 
   .site-header.open .main-navigation {

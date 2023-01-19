@@ -8,6 +8,8 @@
 
 .slider_section_item ._wrap {
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .slider_section_item ._inner {
@@ -33,7 +35,7 @@
 
 @media only screen and (min-width: 768px) {
   .slider_section_item ._wrap {
-
+    padding-top: 100px;
   }
 
   .slider_section_item ._inner {
