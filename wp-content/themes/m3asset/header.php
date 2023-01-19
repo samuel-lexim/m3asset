@@ -30,17 +30,28 @@
 <?php wp_body_open(); ?>
 
 <?php
+$homeLogoId = get_field('home_logo', 'option');
+$header_bg = get_field('header_bg', 'option');
+$header_color = get_field('header_color', 'option');
 $show_square_on_active_links = get_field('show_square_on_active_links', 'option');
 
+$transparent_pages = get_field('header_transparent_list', 'option');
+$page_id = get_queried_object_id();
+$isTransparent = in_array($page_id, $transparent_pages) ? ' transparentHeader' : '';
 ?>
 
-<div id="page" class="site <?= $show_square_on_active_links ? 'showSquareOmActivatedLink' : '' ?>">
+<div id="page" class="bodyContainer <?= esc_attr( ($show_square_on_active_links ? 'showSquareOmActivatedLink ' : '') .
+    $header_bg . ' ' . $header_color . $isTransparent ) ?>">
     <header id="masthead" class="site-header">
         <div class="header_inner inner_bottom_header lr_pad">
 
             <div class="site-branding">
                 <?php
-                the_custom_logo();
+                if ( is_front_page() && $homeLogoId) {
+                    echo getCustomLogoById($homeLogoId);
+                } else {
+                    the_custom_logo();
+                }
                 ?>
             </div>
 

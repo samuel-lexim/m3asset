@@ -192,11 +192,11 @@ if (defined('JETPACK__VERSION')) {
 //add_theme_support('disable-custom-gradients', true);
 
 // Remove global-styles
-remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
-remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
 
 // Remove SVG tag on body
-remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
 
 /* Disable WordPress Admin Bar for all users */
 add_filter('show_admin_bar', '__return_false');
@@ -342,5 +342,67 @@ function createSlug($str, string $delimiter = '-'): string
     $slug = strtolower(trim(preg_replace('/[\s-]+/', $delimiter,
         preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/&/', 'and', preg_replace('/\'/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
     return esc_attr($slug);
+}
 
+/**
+ * Get custom logo base on image ID
+ * @param $imgId
+ * @return string
+ */
+function getCustomLogoById($imgId): string
+{
+    $html = '';
+
+    // We have a logo. Logo is go.
+    if ($imgId) {
+        $custom_logo_attr = array(
+            'class' => 'custom-logo',
+            'loading' => false,
+        );
+
+        $unlink_homepage_logo = (bool)get_theme_support('custom-logo', 'unlink-homepage-logo');
+
+        if ($unlink_homepage_logo && is_front_page() && !is_paged()) {
+            /*
+             * If on the home page, set the logo alt attribute to an empty string,
+             * as the image is decorative and doesn't need its purpose to be described.
+             */
+            $custom_logo_attr['alt'] = '';
+        } else {
+            /*
+             * If the logo alt attribute is empty, get the site title and explicitly pass it
+             * to the attributes used by wp_get_attachment_image().
+             */
+            $image_alt = get_post_meta($imgId, '_wp_attachment_image_alt', true);
+            if (empty($image_alt)) {
+                $custom_logo_attr['alt'] = get_bloginfo('name', 'display');
+            }
+        }
+
+
+        /*
+         * If the alt attribute is not empty, there's no need to explicitly pass it
+         * because wp_get_attachment_image() already adds the alt attribute.
+         */
+        $image = wp_get_attachment_image($imgId, 'full', false, $custom_logo_attr);
+
+        if ($unlink_homepage_logo && is_front_page() && !is_paged()) {
+            // If on the home page, don't link the logo to home.
+            $html = sprintf(
+                '<span class="custom-logo-link">%1$s</span>',
+                $image
+            );
+        } else {
+            $aria_current = is_front_page() && !is_paged() ? ' aria-current="page"' : '';
+
+            $html = sprintf(
+                '<a href="%1$s" class="custom-logo-link" rel="home"%2$s>%3$s</a>',
+                esc_url(home_url('/')),
+                $aria_current,
+                $image
+            );
+        }
+    }
+
+    return $html;
 }

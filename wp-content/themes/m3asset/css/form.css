@@ -28,6 +28,10 @@ label.wpforms-error {
   font-weight: 500;
 }
 
+._has_bg label.wpforms-error  {
+  color: #fff;
+}
+
 .wpforms-field input {
   width: 100%;
   height: 50px;
