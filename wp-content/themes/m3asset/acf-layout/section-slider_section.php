@@ -31,7 +31,7 @@ if ( isset( $args ) && $args && $args['slide_list'] && is_array($args['slide_lis
                     <?php } ?>
 
                     <?php if ( $slide['slide_heading'] ) { ?>
-                        <p class="_heading s20 blueSquare"><?= esc_html($slide["slide_heading"]) ?></p>
+                        <p class="_heading s20"><?= esc_html($slide["slide_heading"]) ?></p>
                     <?php } ?>
 
                     <?php if ( $slide['slide_content'] ) { ?>

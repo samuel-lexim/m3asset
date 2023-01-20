@@ -153,10 +153,36 @@ h4, p {
 }
 
 .darkButton:hover {
-  color: #00a6ff;
+  background: #0082C8;
+  color: #fff;
 }
 .darkButton:hover svg path {
-  fill: #00a6ff;
+  fill: #fff;
+}
+
+.blueButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  height: 36px;
+  line-height: 36px;
+  background: #0082C8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.blueButton svg {
+  margin-left: 5px;
+}
+
+.blueButton:hover {
+  background: #2D4057;
+  color: #fff;
+}
+.blueButton:hover svg path {
+  fill: #fff;
 }
 
 @media only screen and (min-width: 768px) {

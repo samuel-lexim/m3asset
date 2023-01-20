@@ -34,20 +34,28 @@ $homeLogoId = get_field('home_logo', 'option');
 $header_bg = get_field('header_bg', 'option');
 $header_color = get_field('header_color', 'option');
 $show_square_on_active_links = get_field('show_square_on_active_links', 'option');
+$page_id = get_queried_object_id();
 
 $transparent_pages = get_field('header_transparent_list', 'option');
-$page_id = get_queried_object_id();
 $isTransparent = in_array($page_id, $transparent_pages) ? ' transparentHeader' : '';
+
+$header_color_tablet = get_field('header_color_tablet', 'option');
+$header_textColorOnTablet_list = get_field('header_textColorOnTablet_list', 'option');
+$colorOnTablet = in_array($page_id, $header_textColorOnTablet_list) ? ' ' . $header_color_tablet : '';
+
+$header_color_mobile = get_field('header_color_mobile', 'option');
+$header_textColorOnMobile_list = get_field('header_textColorOnMobile_list', 'option');
+$colorOnMobile = in_array($page_id, $header_textColorOnMobile_list) ? ' ' . $header_color_mobile : '';
 ?>
 
-<div id="page" class="bodyContainer <?= esc_attr( ($show_square_on_active_links ? 'showSquareOmActivatedLink ' : '') .
-    $header_bg . ' ' . $header_color . $isTransparent ) ?>">
+<div id="page" class="bodyContainer <?= esc_attr(($show_square_on_active_links ? 'showSquareOmActivatedLink ' : '') .
+    $header_bg . ' ' . $header_color . $isTransparent . $colorOnMobile . $colorOnTablet) ?>">
     <header id="masthead" class="site-header">
         <div class="header_inner inner_bottom_header lr_pad">
 
             <div class="site-branding">
                 <?php
-                if ( is_front_page() && $homeLogoId) {
+                if (is_front_page() && $homeLogoId) {
                     echo getCustomLogoById($homeLogoId);
                 } else {
                     the_custom_logo();

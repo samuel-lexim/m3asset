@@ -4,6 +4,12 @@ h1, .h1, .s40 {
   line-height: 1.4;
 }
 
+.s38 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 h2, .h2, .s32 {
   font-size: 28px;
   font-weight: 600;
@@ -38,6 +44,10 @@ h4, p, .h4, .s16 {
 @media only screen and (min-width: 768px) {
   h1, .h1, .s40 {
     font-size: 40px;
+  }
+
+  .s38 {
+    font-size: 38px;
   }
 
   h2, .h2, .s32 {

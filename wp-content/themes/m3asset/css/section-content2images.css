@@ -73,7 +73,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .content2images_section ._content_wrap ._col1 {
     flex-basis: calc(100% - 630px);
     padding-right: 40px;

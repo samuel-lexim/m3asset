@@ -57,7 +57,7 @@
         });
         // End - Header
 
-        // Slider section - Slick
+        // Home Slider section (full width) - Slick
         $('.slider_section_slick').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -67,6 +67,15 @@
             adaptiveHeight: true
         });
 
+        // Home Slider section (2 columns) - Slick
+        $('.slider_2cols_section_slick').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            fade: true,
+            adaptiveHeight: true
+        });
     });
 
 }(jQuery));
