@@ -3,6 +3,8 @@ $postId = get_the_ID();
 
 if (isset($args) && $args && $args['slider2cols_list'] && is_array($args['slider2cols_list'])) {
     $whiteArrow = getDefaultImg('arrow_white.svg');
+    $count = count($args['slider2cols_list']);
+    $noDot = $count == 1 ? 'noDots' : '';
     ?>
 
     <div class="slider_2cols_section <?= esc_attr($args['slider2cols_bg_left_col']) ?>">
@@ -21,10 +23,9 @@ if (isset($args) && $args && $args['slider2cols_list'] && is_array($args['slider
         </div>
 
         <div class="_right_col">
-            <div class="slider_2cols_section_slick dots_inner">
+            <div class="slider_2cols_section_slick dots_inner white <?= esc_attr($noDot) ?>">
                 <?php
-                foreach ($args['slider2cols_list'] as $slide) {
-                    ?>
+                foreach ($args['slider2cols_list'] as $slide) { ?>
 
                     <div class="slider_2cols_section_item" style="background-image: url(<?= esc_url($slide['slider2cols_image']) ?>)">
 

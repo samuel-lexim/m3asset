@@ -176,6 +176,10 @@
   color: #0082C8;
 }
 
+.noDots .slick-dots {
+  display: none !important;
+}
+
 .dots_inner .slick-dots {
   bottom: 30px;
 }

@@ -74,7 +74,7 @@
             dots: true,
             arrows: false,
             fade: true,
-            adaptiveHeight: true
+            adaptiveHeight: false
         });
     });
 
