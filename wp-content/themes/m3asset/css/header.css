@@ -134,10 +134,11 @@
     width: 100%;
     padding: 0 27px;
     position: absolute;
-    top: 100%;
+    top: 99%;
     left: 0;
     right: 0;
     background: #fff;
+    border-top: 1px solid;
     z-index: 10;
   }
 
@@ -172,6 +173,10 @@
   .nav-menu a:after {
     right: -11px;
     bottom: 14px;
+  }
+
+  .showSquareOmActivatedLink .nav-menu a:after {
+    bottom: 13px;
   }
 
   /* important */
