@@ -13,48 +13,21 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'm3asset' ); ?></h1>
-			</header><!-- .page-header -->
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'm3asset' ); ?></p>
+            <div class="lr_pad">
+                <header class="page-header">
+                    <h1 class="page-title fw700"><?= esc_html( 'Oops! That page can&rsquo;t be found.'); ?></h1>
+                </header>
 
-					<?php
-					get_search_form();
+                <div class="page-content">
+                    <p class="h2 fw600"><?= esc_html( 'It looks like nothing was found at this location.'); ?></p>
+                </div>
+            </div>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'm3asset' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
+		</section>
 
-					<?php
-					/* translators: %1$s: smiley */
-					$m3asset_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'm3asset' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$m3asset_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+	</main>
 
 <?php
 get_footer();

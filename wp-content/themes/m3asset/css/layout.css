@@ -101,7 +101,7 @@ h4, p {
 
 .error-404.not-found {
   width: 100%;
-  min-height: 404px;
+  min-height: calc(100vh - 222px);
   background: #0082C8;
   color: #fff;
   display: -webkit-flex;
