@@ -37,15 +37,17 @@ $show_square_on_active_links = get_field('show_square_on_active_links', 'option'
 $page_id = get_queried_object_id();
 
 $transparent_pages = get_field('header_transparent_list', 'option');
-$isTransparent = in_array($page_id, $transparent_pages) ? ' transparentHeader' : '';
+$isTransparent = is_array($transparent_pages) && in_array($page_id, $transparent_pages) ? ' transparentHeader' : '';
 
 $header_color_tablet = get_field('header_color_tablet', 'option');
 $header_textColorOnTablet_list = get_field('header_textColorOnTablet_list', 'option');
-$colorOnTablet = in_array($page_id, $header_textColorOnTablet_list) ? ' ' . $header_color_tablet : '';
+$colorOnTablet = is_array($header_textColorOnTablet_list) && in_array($page_id, $header_textColorOnTablet_list)
+    ? ' ' . $header_color_tablet : '';
 
 $header_color_mobile = get_field('header_color_mobile', 'option');
 $header_textColorOnMobile_list = get_field('header_textColorOnMobile_list', 'option');
-$colorOnMobile = in_array($page_id, $header_textColorOnMobile_list) ? ' ' . $header_color_mobile : '';
+$colorOnMobile = is_array($header_textColorOnMobile_list) && in_array($page_id, $header_textColorOnMobile_list)
+    ? ' ' . $header_color_mobile : '';
 ?>
 
 <div id="page" class="bodyContainer <?= esc_attr(($show_square_on_active_links ? 'showSquareOmActivatedLink ' : '') .
