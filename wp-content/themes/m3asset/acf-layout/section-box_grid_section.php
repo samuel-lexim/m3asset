@@ -25,14 +25,13 @@ if (isset($args) && $args && $args['box_repeater'] && is_array($args['box_repeat
                             </div>
                         <?php } ?>
 
-
                         <div class="_content">
                             <?php if ($heading) { ?>
                                 <h3 class="_box_item_heading darkBlue s20"><?= esc_html($heading) ?></h3>
                             <?php } ?>
 
                             <?php if ($grid['box_item_summary']) { ?>
-                                <h4 class="_box_item_summary s16"><?= $grid['box_item_summary'] ?></h4>
+                                <h4 class="_box_item_summary s16 lh_1875"><?= $grid['box_item_summary'] ?></h4>
                             <?php } ?>
                         </div>
 

@@ -55,8 +55,24 @@ h4, p {
   line-height: 2;
 }
 
+.lh_1875 {
+  line-height: 1.875;
+}
+
+.lh_185 {
+  line-height: 1.85;
+}
+
+.lh_175 {
+  line-height: 1.75;
+}
+
 .lh_17 {
   line-height: 1.7;
+}
+
+.lh_16 {
+  line-height: 1.6;
 }
 
 .lh_15 {
@@ -65,6 +81,14 @@ h4, p {
 
 .lh_14 {
   line-height: 1.4;
+}
+
+.lh_12 {
+  line-height: 1.2;
+}
+
+.lh_11 {
+  line-height: 1.1;
 }
 
 .lh_1, .lh_10 {

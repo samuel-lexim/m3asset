@@ -12,7 +12,6 @@
   background: #E9F3F9;
 }
 
-
 .box_grid_flex {
   display: flex;
   flex-direction: column;
@@ -27,11 +26,15 @@
   min-height: 350px;
   width: 100%;
   text-align: center;
-  padding: 20px 20px 143px;
+  padding: 20px;
   background: #F8F8F8;
   margin: 18px 0;
   z-index: 1;
   border-radius: 10px;
+}
+
+.box_grid_flex.bottom .box_item {
+  padding-bottom: 143px;
 }
 
 .box_grid_flex.light_sky .box_item {
@@ -77,7 +80,6 @@
 
 .box_grid_flex ._box_item_summary {
   margin-bottom: 0;
-  line-height: 1.875;
 }
 
 @media only screen and (min-width: 768px) {
@@ -102,4 +104,9 @@
   .box_grid_flex .box_item {
     margin: 18px 0;
   }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1360px) {
+
 }
