@@ -32,7 +32,7 @@ if (isset($args) && $args && $args['box_repeater'] && is_array($args['box_repeat
                             <?php } ?>
 
                             <?php if ($grid['box_item_summary']) { ?>
-                                <h4 class="_box_item_summary s16"><?= esc_textarea($grid['box_item_summary']) ?></h4>
+                                <h4 class="_box_item_summary s16"><?= $grid['box_item_summary'] ?></h4>
                             <?php } ?>
                         </div>
 
