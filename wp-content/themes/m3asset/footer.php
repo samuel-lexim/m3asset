@@ -11,6 +11,7 @@
 
 
 $footer_mail      = get_field( 'footer_email', 'option' );
+$footer_address   = get_field( 'footer_address', 'option' );
 $footer_copyright = get_field( 'copyright', 'option' );
 
 ?>
@@ -22,8 +23,12 @@ $footer_copyright = get_field( 'copyright', 'option' );
             <p class="darkBlue s14 fw700"><?= esc_html($footer_mail) ?></p>
             <?php } ?>
 
+            <?php if ($footer_address) { ?>
+            <p class="colorBlue s13 fw600"><?= esc_html($footer_address) ?></p>
+            <?php } ?>
+
             <?php if ($footer_copyright) { ?>
-            <p class="s13 fw400"><?= esc_html($footer_copyright) ?></p>
+            <p class="s12 fw500"><?= esc_html($footer_copyright) ?></p>
             <?php } ?>
 
         </div><!-- .site-info -->

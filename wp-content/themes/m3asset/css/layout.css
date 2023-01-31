@@ -23,6 +23,10 @@ a, .darkBlue {
   color: #2D4057;
 }
 
+.colorBlue {
+  color: #0082C8;
+}
+
 a:hover, a:focus {
   color: #0082C8;
 }

@@ -28,7 +28,7 @@ h3, .h3, .s24 {
   line-height: 1.4;
 }
 
-h4, p, .h4, .s16 {
+h4, .h4, .s16 {
   font-size: 15px;
   font-weight: 300;
 }
@@ -39,6 +39,18 @@ h4, p, .h4, .s16 {
 
 .s13 {
   font-size: 13px;
+}
+
+.s12 {
+  font-size: 12px;
+}
+
+.s11 {
+  font-size: 11px;
+}
+
+.s10 {
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -62,16 +74,8 @@ h4, p, .h4, .s16 {
     font-size: 20px;
   }
 
-  h4, p, .h4, .s16 {
+  h4, .h4, .s16 {
     font-size: 16px;
-  }
-
-  .s14 {
-    font-size: 14px;
-  }
-
-  .s13 {
-    font-size: 13px;
   }
 }
 
