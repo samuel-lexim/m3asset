@@ -46,6 +46,10 @@
   background-color: #826a88;
 }
 
+.title_section ._title.uc_blue_3F93BC:before {
+  background-color: #3F93BC;
+}
+
 @media only screen and (min-width: 768px) {
 
 }

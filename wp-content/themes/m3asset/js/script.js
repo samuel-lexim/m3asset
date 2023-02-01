@@ -41,9 +41,11 @@
 
             if (parent.hasClass('open')) {
                 $('.site-header').removeClass('open');
+                $('body').removeClass('menuIsOpened');
                 parent.removeClass('open');
             } else {
                 $('.site-header').addClass('open');
+                $('body').addClass('menuIsOpened');
                 parent.addClass('open');
             }
         });
@@ -53,6 +55,7 @@
             if (e.keyCode === 27) {
                 $('.nav-button-wrap').removeClass('open');
                 $('.site-header').removeClass('open');
+                $('body').removeClass('menuIsOpened');
             }
         });
         // End - Header

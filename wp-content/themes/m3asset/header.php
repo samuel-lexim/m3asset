@@ -55,6 +55,12 @@ $colorOnMobile = is_array($header_textColorOnMobile_list) && in_array($page_id, 
     <header id="masthead" class="site-header">
         <div class="header_inner inner_bottom_header lr_pad">
 
+            <div class="nav-button-wrap">
+                <div class="nav-icon" id="NavMenuButton">
+                    <span></span>
+                </div>
+            </div>
+
             <div class="site-branding">
                 <?php
                 if (is_front_page() && $homeLogoId) {
@@ -63,12 +69,6 @@ $colorOnMobile = is_array($header_textColorOnMobile_list) && in_array($page_id, 
                     the_custom_logo();
                 }
                 ?>
-            </div>
-
-            <div class="nav-button-wrap">
-                <div class="nav-icon" id="NavMenuButton">
-                    <span></span>
-                </div>
             </div>
 
             <nav id="site-navigation" class="main-navigation">
