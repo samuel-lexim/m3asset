@@ -72,6 +72,16 @@
   color: #54AAD9;
 }
 
+.bodyContainer.transparentHeader.showSquareOmActivatedLink .nav-menu a:hover,
+.bodyContainer.transparentHeader.showSquareOmActivatedLink .nav-menu a[aria-current="page"] {
+  color: #fff;
+}
+
+.bodyContainer.transparentHeader.showSquareOmActivatedLink .nav-menu a:hover:after,
+.bodyContainer.transparentHeader.showSquareOmActivatedLink .nav-menu a[aria-current="page"]:after {
+  background: #fff;
+}
+
 .bodyContainer.transparentHeader .site-header {
   background: transparent;
   color: #fff;
