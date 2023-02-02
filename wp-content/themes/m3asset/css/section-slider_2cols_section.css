@@ -111,8 +111,8 @@
   .slider_2cols_section ._right_col .lr_pad {
     width: 100%;
     margin: 0;
-    padding-left: calc(54vw - 30px - 298px - 18vw);
-    padding-right: calc(54vw - 30px - 298px - 18vw);
+    padding-left: calc(54vw - 30px - 306px - 18vw);
+    padding-right: calc(54vw - 30px - 306px - 18vw);
   }
 
   .slider_2cols_section_item ._wrap {
@@ -128,6 +128,7 @@
   .slider_2cols_section ._right_col .lr_pad {
     padding-left: calc(54vw - 50vw + 562px - 298px - 240px);
     padding-right: 30px;
+    height: 100%;
   }
 
   .slider_2cols_section_item ._wrap {
