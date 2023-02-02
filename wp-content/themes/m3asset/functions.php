@@ -406,3 +406,17 @@ function getCustomLogoById($imgId): string
 
     return $html;
 }
+
+/**
+* Block URLs from inside form on Single Line Text and Paragraph Text form fields
+*
+* @link https://wpforms.com/developers/how-to-block-urls-inside-the-form-fields/
+*/
+function wpf_dev_check_for_urls( $field_id, $field_submit, $form_data ) {
+    if( strpos($field_submit, 'http') !== false || strpos($field_submit, 'www.') !== false ) {
+        wpforms()->process->errors[ $form_data['id'] ][ $field_id ] = esc_html__( 'No URLs allowed.', 'wpforms' );
+        return;
+    }
+}
+add_action( 'wpforms_process_validate_textarea', 'wpf_dev_check_for_urls', 10, 3 );
+add_action( 'wpforms_process_validate_text', 'wpf_dev_check_for_urls', 10, 3 );
