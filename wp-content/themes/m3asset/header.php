@@ -26,7 +26,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+$class = [];
+$site = get_field('header_site', 'option');
+if ($site && $site !== '') {
+    $class[] = $site;
+}
+?>
+
+<body <?php body_class($class); ?>>
 <?php wp_body_open(); ?>
 
 <?php

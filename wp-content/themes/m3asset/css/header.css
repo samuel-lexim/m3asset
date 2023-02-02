@@ -146,7 +146,8 @@
   }
 
   .bodyContainer.darkBlue .main-navigation {
-    background-color: #253952;
+    background-color: #fff;
+    color: #2D4057;
   }
 
   .site-header.open .main-navigation {
@@ -197,27 +198,26 @@
     color: #0082C8;
   }
 
-  /* important */
-  .bodyContainer.txtMobile_darkBlue .site-header {
-    color: #2D4057 !important;
+  /* Custom */
+  .m3asset.home .bodyContainer.transparentHeader .site-header {
+    position: relative;
   }
 
-  .bodyContainer.txtMobile_white .site-header {
-    color: #fff !important;
+  .m3asset.home .bodyContainer.transparentHeader .nav-icon:after,
+  .m3asset.home .bodyContainer.transparentHeader .nav-icon:before,
+  .m3asset.home .bodyContainer.transparentHeader .nav-icon span {
+    background-color: #2D4057;
   }
 
-  /*
-  .bodyContainer.txtMobile_darkBlue .nav-icon:after,
-  .bodyContainer.txtMobile_darkBlue .nav-icon:before,
-  .bodyContainer.txtMobile_darkBlue .nav-icon span {
-    background-color: #2D4057 !important;
+  .m3asset.home .bodyContainer.transparentHeader .main-navigation {
+    background: #127BB4;
+    color: #fff;
   }
-  .bodyContainer.txtMobile_white .nav-icon:after,
-  .bodyContainer.txtMobile_white .nav-icon:before,
-  .bodyContainer.txtMobile_white .nav-icon span {
-    background-color: #fff !important;
+
+  .m3asset.home .bodyContainer.transparentHeader .nav-menu a[aria-current="page"] {
+    color: #67CAFF;
   }
-   */
+
 }
 
 /* Desktop */
@@ -237,7 +237,7 @@
   }
 
   .main-navigation li.menu-item {
-    margin-left: 80px;
+    margin-left: 6vw;
   }
 
   /* Color */
@@ -266,5 +266,9 @@
   }
 }
 
-
+@media only screen and (min-width: 1180px) {
+  .main-navigation li.menu-item {
+    margin-left: 80px;
+  }
+}
 
