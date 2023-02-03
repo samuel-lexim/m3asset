@@ -37,15 +37,18 @@ if (isset($args) && $args && $args['box_repeater'] && is_array($args['box_repeat
 
                                     <?php if ($service['box_item_content_heading']) { ?>
 
-                                    <div class="_heading_content_hover">
-                                        <h4 class="_box_item_content_heading s16 fw300"><?= $service['box_item_content_heading'] ?></h4>
+                                        <div class="_heading_content_hover">
+                                            <h4 class="_box_item_content_heading s16 fw300"><?= $service['box_item_content_heading'] ?></h4>
 
-                                        <?php if (isset($service['box_item_content_popup']) && $service['box_item_content_popup']) { ?>
-                                            <div class="_box_item_content_popup_wrap">
-                                                <div class="fw400 s14 lh_185"><?= $service['box_item_content_popup'] ?></div>
-                                            </div>
-                                        <?php } ?>
-                                    </div>
+                                            <?php if (isset($service['box_item_content_popup']) && $service['box_item_content_popup']) { ?>
+                                                <div class="_box_item_content_popup_wrap">
+                                                    <div class="_popUpContentRelative">
+                                                        <div class="_xClosePopup" role="button" style="display: none">&#x00d7;</div>
+                                                        <div class="_popUpContent fw400 s14 lh_185"><?= $service['box_item_content_popup'] ?></div>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
 
                                     <?php } ?>
 
@@ -54,8 +57,6 @@ if (isset($args) && $args && $args['box_repeater'] && is_array($args['box_repeat
                             <?php } ?>
 
                         </div>
-
-
 
                     </div>
 

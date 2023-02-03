@@ -79,6 +79,65 @@
             fade: true,
             adaptiveHeight: false
         });
+
+        // START - Page section script
+        let pageSection = {
+            selector: {
+                'boxPopUpHeading': '.box_grid_popup_section ._box_item_content_heading',
+                'boxPopUpCloseButton': '.box_grid_popup_section ._xClosePopup',
+            },
+
+            init: function () {
+                this.boxGridPopupSection();
+                this.mouseup();
+                this.resize();
+            },
+
+            boxGridPopupSection: function () {
+                let _this = this;
+                $(_this.selector.boxPopUpHeading).click(function () {
+                    let thisClick = $(this);
+                    _this.boxGridPopupSection_clearPopUp();
+                    thisClick.addClass('activated');
+                });
+
+                $(_this.selector.boxPopUpCloseButton).click(function () {
+                    _this.boxGridPopupSection_clearPopUp();
+                });
+            },
+
+            boxGridPopupSection_clearPopUp: function () {
+                let _this = this;
+                $(_this.selector.boxPopUpHeading).removeClass('activated');
+            },
+
+            mouseup: function () {
+                let _this = this;
+
+                $(document).mouseup(function (e) {
+                    // close popup when click outside the boxGridPopup
+                    if ($(e.target).closest("._box_item_content_heading.activated + ._box_item_content_popup_wrap").length === 0) {
+                        _this.boxGridPopupSection_clearPopUp();
+                    }
+                });
+            },
+
+            resize: function () {
+                let _this = this;
+
+                $(window).resize(function () {
+                    let curWidth = $(window).width();
+                    if (curWidth > 1366) {
+                        _this.boxGridPopupSection_clearPopUp();
+                    }
+                });
+            }
+        }
+
+        pageSection.init();
+        // END - Page section script
+
+
     });
 
 }(jQuery));
