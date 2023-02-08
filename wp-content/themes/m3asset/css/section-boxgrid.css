@@ -26,10 +26,9 @@
   min-height: 350px;
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #F8F8F8;
   margin: 18px 0;
-  z-index: 1;
   border-radius: 10px;
 }
 
@@ -82,6 +81,56 @@
   margin-bottom: 0;
 }
 
+.box_grid_section ._readMorePopUp {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 333;
+}
+
+.box_grid_section ._readMoreButton {
+  margin-top: 15px;
+}
+
+.box_grid_section ._readMoreButton.activated + ._readMorePopUp {
+  display: flex;
+}
+
+.box_grid_section ._readMoreInner {
+  position: relative;
+  width: 90vw;
+  max-width: 1124px;
+  height: 90vh;
+  max-height: 715px;
+  background: #fff;
+  text-align: left;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+}
+
+.box_grid_section ._readMoreInner .__content {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.box_grid_section ._xClosePopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10px auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
   .box_grid_section .box_grid_flex {
     flex-direction: inherit;
@@ -93,6 +142,16 @@
   .box_grid_section .box_grid_flex .box_item {
     flex: 350px;
     margin: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .box_grid_section ._readMoreInner {
+    padding: 20px 20px 50px 50px;
+  }
+
+  .box_grid_section ._readMoreInner .__content {
+    padding-right: 15px;
   }
 }
 

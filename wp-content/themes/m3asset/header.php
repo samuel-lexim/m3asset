@@ -58,6 +58,8 @@ $colorOnMobile = is_array($header_textColorOnMobile_list) && in_array($page_id, 
     ? ' ' . $header_color_mobile : '';
 ?>
 
+<div class="darkTransparentLayer"></div>
+
 <div id="page" class="bodyContainer <?= esc_attr(($show_square_on_active_links ? 'showSquareOmActivatedLink ' : '') .
     $header_bg . ' ' . $header_color . $isTransparent . $colorOnMobile . $colorOnTablet) ?>">
     <header id="masthead" class="site-header">

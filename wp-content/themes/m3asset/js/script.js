@@ -49,15 +49,6 @@
                 parent.addClass('open');
             }
         });
-
-        $(document).keyup(function (e) {
-            // press esc
-            if (e.keyCode === 27) {
-                $('.nav-button-wrap').removeClass('open');
-                $('.site-header').removeClass('open');
-                $('body').removeClass('menuIsOpened');
-            }
-        });
         // End - Header
 
         // Home Slider section (full width) - Slick
@@ -83,14 +74,54 @@
         // START - Page section script
         let pageSection = {
             selector: {
+                'boxGridSection_ReadMoreButton' : '.box_grid_section ._readMoreButton',
+                'boxGridSection_PopUpCloseButton': '.box_grid_section ._xClosePopup',
                 'boxPopUpHeading': '.box_grid_popup_section ._box_item_content_heading',
                 'boxPopUpCloseButton': '.box_grid_popup_section ._xClosePopup',
             },
 
             init: function () {
+                this.boxGridSection();
                 this.boxGridPopupSection();
                 this.mouseup();
                 this.resize();
+                this.pressEsc();
+            },
+
+            pressEsc: function () {
+                let _this = this;
+                $(document).keyup(function (e) {
+                    // press esc
+                    if (e.keyCode === 27) {
+                        // close header
+                        $('.nav-button-wrap').removeClass('open');
+                        $('.site-header').removeClass('open');
+                        $('body').removeClass('menuIsOpened');
+
+                        // close popup
+                        _this.boxGridSection_clearPopUp();
+                    }
+                });
+            },
+
+            boxGridSection: function () {
+                let _this = this;
+                $(_this.selector.boxGridSection_ReadMoreButton).click(function () {
+                    let thisClick = $(this);
+                    _this.boxGridSection_clearPopUp();
+                    $('body').addClass("openLayer");
+                    thisClick.addClass('activated');
+                });
+
+                $(_this.selector.boxGridSection_PopUpCloseButton).click(function () {
+                    _this.boxGridSection_clearPopUp();
+                });
+            },
+
+            boxGridSection_clearPopUp: function () {
+                let _this = this;
+                $(_this.selector.boxGridSection_ReadMoreButton).removeClass('activated');
+                $('body').removeClass("openLayer");
             },
 
             boxGridPopupSection: function () {
