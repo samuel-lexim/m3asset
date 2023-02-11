@@ -413,10 +413,16 @@ function getCustomLogoById($imgId): string
 * @link https://wpforms.com/developers/how-to-block-urls-inside-the-form-fields/
 */
 function wpf_dev_check_for_urls( $field_id, $field_submit, $form_data ) {
-    if( strpos($field_submit, 'http') !== false || strpos($field_submit, 'www.') !== false ) {
-        wpforms()->process->errors[ $form_data['id'] ][ $field_id ] = esc_html__( 'No URLs allowed.', 'wpforms' );
-        return;
+    //Create your list of profanity words separated by commas
+    if ( containsUrl($field_submit) ) {
+        wpforms()->process->errors[ $form_data[ 'id' ] ][ $field_id ] = esc_html__( 'Invalid content.', 'wpforms' );        return;
     }
 }
 add_action( 'wpforms_process_validate_textarea', 'wpf_dev_check_for_urls', 10, 3 );
-add_action( 'wpforms_process_validate_text', 'wpf_dev_check_for_urls', 10, 3 );
+//add_action( 'wpforms_process_validate_text', 'wpf_dev_check_for_urls', 10, 3 );
+
+function containsUrl($string) {
+    return preg_match("/[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]\.[a-z]{2,}/i", $string);
+}
+
+
