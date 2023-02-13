@@ -10,7 +10,9 @@ if ( isset( $args ) && $args ) {
         $mobileBg = $args['mobile_background'] ?? getDefaultImg('default-hero-mobile.jpg');
         ?>
 
-        <div class="_bg_desktop" style="background-image: url(<?= esc_url($bg) ?>)"></div>
+        <div class="_bg_desktop">
+            <img src="<?= esc_url($bg) ?>" alt="<?= esc_attr($args['the_title']) ?>" />
+        </div>
 
         <div class="_bg_mobile">
             <img src="<?= esc_url($mobileBg) ?>" alt="<?= esc_attr($args['the_title']) ?>" />
@@ -18,7 +20,9 @@ if ( isset( $args ) && $args ) {
 
         <div class="_text_wrap lr_pad">
             <?php if ( $args['the_title'] ) { ?>
-                <h1 class="_title <?= esc_attr($args['underline_color']) ?>"><?= esc_html($args['the_title']) ?></h1>
+                <h1 class="_title" style="--tooltip-color: <?= esc_attr($args['underline_color']) ?>">
+                    <?= esc_html($args['the_title']) ?>
+                </h1>
             <?php } ?>
 
             <?php if ( $args['description'] ) { ?>
