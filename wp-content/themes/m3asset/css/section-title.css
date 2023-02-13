@@ -1,6 +1,7 @@
 .title_section {
   position: relative;
   color: #fff;
+  display: flex;
 }
 
 .title_section ._bg_desktop {

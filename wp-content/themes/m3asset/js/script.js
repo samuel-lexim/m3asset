@@ -55,6 +55,8 @@
         $('.slider_section_slick').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
             dots: true,
             arrows: false,
             fade: true,
@@ -65,6 +67,8 @@
         $('.slider_2cols_section_slick').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
             dots: true,
             arrows: false,
             fade: true,
